@@ -1,0 +1,28 @@
+/* assets/css/style.css */
+
+/* 전체 텍스트에 타이핑 효과를 부여하는 CSS */
+body, p, h1, h2, h3, h4, h5, h6, li {
+	font-family: 'Courier New', monospace;
+	font-size: 24px;
+	white-space: nowrap;
+	overflow: hidden;
+	display: inline-block;
+	border-right: 3px solid black;
+	padding-right: 5px;
+	animation: typing 4s steps(40) 1s 1 normal both, blink 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+	from {
+	  width: 0;
+	}
+	to {
+	  width: 100%;
+	}
+  }
+  
+  @keyframes blink {
+	50% {
+	  border-color: transparent;
+	}
+  }
