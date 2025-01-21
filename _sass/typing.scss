@@ -3,12 +3,12 @@
 /* 전체 텍스트에 타이핑 효과를 부여하는 CSS */
 body, p, h1, h2, h3, h4, h5, h6, li {
 	font-family: 'Courier New', monospace;
-	//font-size: 24px;
+	font-size: 2rem; /* 기본 폰트 크기 */
 	white-space: nowrap;
 	overflow: hidden;
 	display: inline-block;
 	border-right: 3px solid black;
-	padding-right: 5px;
+	padding-right: 0.25rem;
 	animation: typing 4s steps(40) 1s 1 normal both, blink 0.75s step-end infinite;
   }
   
@@ -26,3 +26,12 @@ body, p, h1, h2, h3, h4, h5, h6, li {
 	  border-color: transparent;
 	}
   }
+  
+  /* 화면이 768px 이하일 때 폰트 크기와 애니메이션 속도 조정 */
+  @media (max-width: 768px) {
+	body, p, h1, h2, h3, h4, h5, h6, li {
+	  font-size: 1.5rem;
+	  animation: typing 3s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
+	}
+  }
+  
