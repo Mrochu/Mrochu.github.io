@@ -3,3 +3,29 @@ layout: default
 ---
 
 {{ content }}
+{% assign contentwonl = content | strip_newlines %}
+{% unless contentwonl == "" %}
+  <br />
+{% endunless %} <!-- add line break if there is any content -->
+
+{%- if site.posts.size > 0 -%}
+  <ul>
+    {%- for post in site.posts -%}
+      <li>
+        {%- assign date_format = "%Y-%m-%d" -%}
+        [ {{ post.date | date: date_format }} ] <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}
+
+<!-- 이전 글과 이후 글 링크 -->
+<div class="post-navigation">
+  {% if page.previous %}
+    <a href="{{ page.previous.url | relative_url }}" class="previous-post">&larr; 이전 글: {{ page.previous.title }}</a>
+  {% endif %}
+  
+  {% if page.next %}
+    <a href="{{ page.next.url | relative_url }}" class="next-post">다음 글: {{ page.next.title }} &rarr;</a>
+  {% endif %}
+</div>
