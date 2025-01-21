@@ -3,14 +3,13 @@ layout: default
 ---
 
 {{ content }}
-
 <!-- 이전 글과 이후 글 링크 -->
 <div class="post-navigation">
   {% if page.previous %}
-    <a href="{{ page.previous.url | relative_url }}" class="previous-post">&lt;&lt;&lt;{{ page.previous.title }}</a>
+    <a href="{{ page.previous.url | relative_url }}" class="previous-post">{{ page.previous.title }}</a>
   {% endif %}
   
   {% if page.next %}
-    <a href="{{ page.next.url | relative_url }}" class="next-post" style="text-align:right">   {{ page.next.title }}  &gt;&gt;&gt; </a>
+    <a href="{{ page.next.url | relative_url }}" class="next-post" style="text-align:right">{{ page.next.title }}</a>
   {% endif %}
 </div>
