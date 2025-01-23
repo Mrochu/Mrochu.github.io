@@ -6,13 +6,10 @@ layout: default
 {{ content }}
 
 <!-- 이전 글과 이후 글 링크 -->
-<div class="post-navigation">
-    <div>
-        <a class="prev" href="{{page.previous.url}}">&laquo;{{page.previous.title}}</a>
-    </div>
-    <br>
-    <div style="text-align: right;" display: block>
-        <a class="next" href="{{page.next.url}}" style="text-align: right;">{{page.next.title}}&raquo;</a>
-    </div>
-    
+
+<div style="display: block; text-align: right !important;">
+    <a class="next" href="{{page.next.url}}" style="display: block; text-align: right !important;">{{page.next.title}} &raquo;</a>
+</div>
+<div>
+    <a class="prev" href="{{page.previous.url}}">&laquo;{{page.previous.title}}</a>
 </div>

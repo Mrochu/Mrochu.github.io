@@ -4,7 +4,7 @@ layout: home
 permalink: /
 ---
 
-# [포트폴리오]() 겸 블로그
+# [포트폴리오](/category/portfolio.html) 겸 블로그
 
 [자기소개서](/resume/resume.html)
 
