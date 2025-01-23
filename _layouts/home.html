@@ -2,11 +2,50 @@
 layout: default
 ---
 
+
+
+<!--
+<div class="category-container">
+  <input type="checkbox" id="toggle-category" class="toggle-checkbox" />
+  <label for="toggle-category" class="category-title">카테고리</label>
+  <div class="category-list">
+    <ul>
+      {% assign pages_list = site.pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "category" %}
+            <li><a class="category-link {% if page.url == node.url %} active{% endif %}" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a></li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+-->
+
 {{ content }}
+
+<div class="category">
+  category
+  <ul>
+    {% assign pages_list = site.pages %}
+    {% for node in pages_list %}
+      {% if node.title != null %}
+        {% if node.layout == "category" %}
+          <li><a class="category-link {% if page.url == node.url %} active{% endif %}"
+          href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a></li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    
+  </ul>
+</div>
+
 {% assign contentwonl = content | strip_newlines %} {% unless contentwonl == ""  %} <br /> {% endunless %} <!-- add line break if there is any content -->
 
 {%- if site.posts.size > 0 -%}
   <ul>
+    최근글들
     {%- for post in site.posts -%}
     <li>
       {%- assign date_format = "%Y-%m-%d" -%}
@@ -15,3 +54,4 @@ layout: default
     {%- endfor -%}
   </ul>
 {%- endif -%}
+

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Dark theme variables
  */
@@ -48,7 +49,7 @@ body {
   line-height: 1.5 !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   font-size: 12.5px;
   margin: 0px;
   margin-top: 22px;
@@ -449,5 +450,58 @@ pre {
 .highlight .il {
   color: var(--code-color-14);
 } /* Literal.Number.Integer.Long */
+/* 기본 스타일 */
+.category-container {
+  margin-bottom: 1rem;
+}
+
+.toggle-checkbox {
+  display: none; /* 체크박스 숨김 */
+}
+
+.category-title {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 8px 16px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  display: inline-block;
+}
+
+.category-list {
+  max-height: 0; /* 숨김 상태 */
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  background-color: white;
+  border: 1px solid #ddd;
+  margin: 0;
+  padding: 0;
+}
+
+.category-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.category-list li {
+  padding: 8px 16px;
+}
+
+.category-list li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.category-list li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* 체크박스가 선택되었을 때 항목 표시 */
+.toggle-checkbox:checked + .category-title + .category-list {
+  max-height: 500px; /* 충분히 큰 값 설정 */
+  opacity: 1;
+}
 
 /*# sourceMappingURL=main-dark.css.map */
