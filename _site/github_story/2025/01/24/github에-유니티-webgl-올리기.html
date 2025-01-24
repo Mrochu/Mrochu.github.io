@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" />
+<meta http-equiv="X-XSS-Protection"  content="1;mode=block" always>
+<meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>github에 유니티 webgl 올리기</title>
+  <H1>
+    <a href="http://localhost:4000">/home</a><a href="/category/github_story.html">/github_story</a><a href="/github_story/2025/01/24/github%E1%84%8B%E1%85%A6-%E1%84%8B%E1%85%B2%E1%84%82%E1%85%B5%E1%84%90%E1%85%B5-webgl-%E1%84%8B%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%80%E1%85%B5.html">/github에 유니티 webgl 올리기</a></H1><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="github에 유니티 webgl 올리기" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="github에 유니티 webGL 올리기" />
+<meta property="og:description" content="github에 유니티 webGL 올리기" />
+<link rel="canonical" href="http://localhost:4000/github_story/2025/01/24/github%EC%97%90-%EC%9C%A0%EB%8B%88%ED%8B%B0-webgl-%EC%98%AC%EB%A6%AC%EA%B8%B0.html" />
+<meta property="og:url" content="http://localhost:4000/github_story/2025/01/24/github%EC%97%90-%EC%9C%A0%EB%8B%88%ED%8B%B0-webgl-%EC%98%AC%EB%A6%AC%EA%B8%B0.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-24T15:18:25+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="github에 유니티 webgl 올리기" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-24T15:18:25+09:00","datePublished":"2025-01-24T15:18:25+09:00","description":"github에 유니티 webGL 올리기","headline":"github에 유니티 webgl 올리기","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/github_story/2025/01/24/github%EC%97%90-%EC%9C%A0%EB%8B%88%ED%8B%B0-webgl-%EC%98%AC%EB%A6%AC%EA%B8%B0.html"},"url":"http://localhost:4000/github_story/2025/01/24/github%EC%97%90-%EC%9C%A0%EB%8B%88%ED%8B%B0-webgl-%EC%98%AC%EB%A6%AC%EA%B8%B0.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" type="text/css" href="/assets/main-dark.css"></head>
+<body>
+    <div class="container"><header>
+  <div class="menu">
+    <ul></ul>
+  </div>
+</header>
+<main>
+      <h1 id="github에-유니티-webgl-올리기">github에 유니티 webGL 올리기</h1>
+<hr />
+
+<p>하 생각보다 어려웠다. 그래도 뭐 어찌저찌 해냈으니 다음번에 하게될때는 이글을 참조하면 나도 쉽고 찾아보는 사람들도 쉽고 winwin아닐까? 아님말고</p>
+
+<ol>
+  <li>유니티 게임을 완성했다! 그럼 이제 웹에도 한번 올려볼까?</li>
+</ol>
+
+<p>일단 webgl 모듈을 다운로드하자
+<img src="/img/2025-01-24/1.png" alt="모듈 다운설정" />
+클릭
+addmodul 클릭후 platforms 항목에서 webgl 선택후 설치</p>
+
+<ol>
+  <li>모듈이 설치되었으면 프로젝트 빌드 타임</li>
+</ol>
+
+<p><img src="/img/2025-01-24/2.png" alt="프로젝트 세팀" />
+빌드 세팅 클릭
+<img src="/img/2025-01-24/3.png" alt="프로젝트 세팀" />
+webGL선택후 체인지 그후 플레이어 세팅 클릭 (위 이미지의 왼쪽 하단)
+<img src="/img/2025-01-24/4.png" alt="프로젝트 세팀" />
+player 항목의 publishing settings에 compression format 항목을 disable로 변경 사실 압축하는 거라서 해놓는게 좋지만 이상하게 버그가 많은지 안될떄가 많아서 압축을 안한다.</p>
+
+<p>그리고 build and run을 클릭하면 웹에서 작동하는 게임의 모습을 볼수있다. 다만 직접 빌드된 파일에 들어가서 index.html을 클릭하면 작동이 안된다. 그러니까 우리는 프로젝트를 github 에 올려서 다른사람들도 웹에서 볼수있게 만드는겸 작동되도록 하면된다.</p>
+
+<p>github 에 들어가서 리포지토리를 새롭게 만든다.
+그후에 우리가 빌드한 파일을 업로드 한다.
+<img src="/img/2025-01-24/5.png" alt="프로젝트 세팀" />
+그후 리포지토리 세팅에 들어가서 
+<img src="/img/2025-01-24/6.png" alt="프로젝트 세팀" />
+페이지에 들어간다음 branch를 main에 root로 변경해준다.</p>
+
+<p>그럼 다되었다. 
+아마도 게임이 뜰것이다.</p>
+
+<p>근데 나중에 게임 파일을 다시 푸쉬해도 잘될까?
+잘 안된다. 그럴때는 page build and deployment 를 푸쉬한다음 들어간다. 그러면 맨위에 클릭해주세요 하고잇는 rerun and job 이라는 이름이 적힌 버튼이 오른쪽 위에 있다.
+오억년 버튼 연타하듯 클릭해주고 한 5분기다리면 아마도 푸쉬된게 적용되어있으것이다.</p>
+
+<p>이쯤하면 아마도 내가 까먹어도 이 글을 보고 잘따라 할것 같으니 그만써야겠다.</p>
+
+
+<!-- 이전 글과 이후 글 링크 -->
+
+<div style="display: block; text-align: right !important;">
+    <a class="next" href="" style="display: block; text-align: right !important;"> &raquo;</a>
+</div>
+<div>
+    <a class="prev" href="/portfolio/2025/01/23/LRUD.html">&laquo;LRUD</a>
+</div>
+
+    </main><footer>
+  
+  jekyll 로 호스팅되며 <a href="https://github.com/b2a3e8/jekyll-theme-console">b2a3e8</a> 의 테마의 개조를 이용중입니다.
+</footer>
+</div>
+  </body>
+</html>
