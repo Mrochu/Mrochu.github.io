@@ -4,8 +4,6 @@ title:  github에 유니티 webgl 올리기
 date:   2025-01-24 15:18:25 +0900
 category: github_story
 ---
-# github에 유니티 webGL 올리기
-****
 
 하 생각보다 어려웠다. 그래도 뭐 어찌저찌 해냈으니 다음번에 하게될때는 이글을 참조하면 나도 쉽고 찾아보는 사람들도 쉽고 winwin아닐까? 아님말고
 

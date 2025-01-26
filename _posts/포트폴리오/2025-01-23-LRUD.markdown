@@ -5,8 +5,6 @@ date:   2025-01-23 12:18:25 +0900
 category: portfolio
 categories: portfolio
 ---
-# LRUD
-****
 
 ![LRUD](/img/2025-01-23/LRUD_start.jpg)
 
