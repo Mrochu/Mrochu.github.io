@@ -74,16 +74,10 @@ textarea { vertical-align: top; }
  * Code and syntax highlighting
  */
 
- code {
-    border: 1px solid white; /* 흰색 선으로 감쌈 */
-    padding: 2px 5px;        /* 안쪽 여백을 주어 코드가 밀리지 않게 */
-    //background-color: #2c3e50; /* 코드 배경색을 다크한 색으로 설정 */
-    color: white;            /* 코드 텍스트 색상은 흰색 */
-}
 
 .lineno { color: var(--code-color-1); margin-right: 15px; }
 figure.highlight { margin: 5px 0; }
-pre { background-color: var(--background-color);  border: none;  padding: 0;   margin: 0;  overflow:auto;  font-size: $base-font-size;  color: var(--text-color);  line-height: 1.7 !important;  font-family: $base-font-family !important; }
+pre { background-color: var(--background-color);  border:  1px solid white;;  padding: 2px 5px;   margin: 0;  overflow:auto;  font-size: $base-font-size;  color: var(--text-color);  line-height: 1.7 !important;  font-family: $base-font-family !important; }
 .highlight .hll { background-color: var(--code-color-2); }
 .highlight .c { color: var(--code-color-1); font-style: italic } /* Comment */
 .highlight .err { color: var(--code-color-3); background-color: var(--code-color-4); } /* Error */
