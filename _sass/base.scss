@@ -7,9 +7,10 @@
 //$base-font-family:     'Source Code Pro', monospace !default;
 @font-face { /* 애플산돌고딕 폰트 적용 */
     font-family: "DOSGothic";
-    src: url("font/DOSGothic.ttf") format("truetype");
+    src: url("/font/DOSGothic.ttf") format("truetype");
     font-weight: normal;
   }
+$base-font-family:     'DOSGothic', monospace !default;
 $base-font-size:       15.5px !default;
 $mobile-font-size:     12px !default;
 $base-line-height:     1.5 !default;
