@@ -1,6 +1,6 @@
 @charset "utf-8";
 //@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700');
-@import url("https://cdn.jsdelivr.net/gh/fontbee/font@main/Leedheo/DOSGothic.woff");
+@import url("https://github.com/hurss/fonts/blob/master/ttf/DOSGothic.ttf");
 /**
  * Style variables
  */
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family:"DOSGothic";
-    src: url('https://cdn.jsdelivr.net/gh/fontbee/font@main/Leedheo/DOSGothic.woff') format('woff');
+    src:url("https://github.com/hurss/fonts/blob/master/ttf/DOSGothic.ttf") format("truetype");
     font-weight:normal;
 }
 $base-font-family:"DOSGothic", monospace !default;
