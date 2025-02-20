@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 source "https://rubygems.org"
-gemspec
 
 
 gem 'jekyll-seo-tag'
-gem 'jekyll-spaceship'
+
+gem "github-pages", "=228"
+gem "jekyll", "=3.1.6"
