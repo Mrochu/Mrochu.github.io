@@ -1,17 +1,23 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700');
+//@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700');
+
+@font-face {
+  font-family:  "DOSGothic";
+  src:  url("./font/DOSGothic.ttf") format("truetype");
+  font-weight:  normal;
+}
 
 /**
  * Style variables
  */
-$base-font-family:     'Source Code Pro', monospace !default;
+//$base-font-family:     'Source Code Pro', monospace !default;
 /*
 @font-face {
     font-family:  "DOSGothic";
     src:  url("/font/DOSGothic.ttf") format("truetype");
     font-weight:  normal;
 }*/
-//$base-font-family:     'DOSGothic', monospace !default;
+$base-font-family:     'DOSGothic', monospace !default;
 $base-font-size:       15.5px !default;
 $mobile-font-size:     12px !default;
 $base-line-height:     1.5 !default;
