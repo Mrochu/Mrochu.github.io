@@ -9,7 +9,7 @@
     {%- if "/home" != page.title -%}
       {%- if "category" != page.layout -%}
         {%- if page.category[0] != empty -%}
-        <a href="/category/{{page.categories[0]}}.html">/{{page.category[0]}}</a>
+          <a href="/category/{{page.categories[0]}}.html">/{{page.category[0]}}</a>
         {%- endif -%}
       {%- endif -%}
       {%- if page.category[1] != empty -%}
