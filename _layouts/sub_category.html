@@ -7,10 +7,8 @@ layout: default
     {% assign category1 = page.categories[1] %}
 
     {% for post in site.categories[category] %}
-      {% if post.categories contains category1 %}
-        {% if "post" == page.layout %}
+      {% if post.categories contains category1 and post.layout == "post"%}
         <li>{{ post.title }} - {{ post.categories | join: ", " }}</li>
-        {% endif %}
       {% endif %}
     {% endfor %}
     
