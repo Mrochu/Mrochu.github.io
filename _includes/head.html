@@ -7,17 +7,20 @@
     <a href="{{site.url}}">/home</a> 
     
     {%- if "/home" != page.title -%}
-      {%- if "category" != page.layout and "sub_category" != page.layout -%}
-        {%- if page.category[0] | default: "" != "" -%}
-          <a href="/category/{{page.category[0]}}.html">/{{page.category[0]}}</a>
-        {%- endif -%}
 
-        {%- if page.category[1] | default: "" != "" -%}
-        <a href="/category/{{page.category[1]}}.html">/{{page.category[1]}}</a>
-        {%- endif -%}
+      {%- if page.category[0] | default: "" != "" -%}
+          <a href="/category/{{page.category[0]}}.html">/{{page.category[0]}}</a>
       {%- endif -%}
 
-      <a href="{{page.url}}">/{{page.title}}</a>
+      {%- if page.category[1] | default: "" != "" -%}
+        <a href="/category/{{page.category[1]}}.html">/{{page.category[1]}}</a>
+      {%- endif -%}
+
+      {%- if "post" == page.layout-%}
+        <a href="{{page.url}}">/{{page.title}}</a>
+      {%- endif -%}
+
+      
     {%- endif -%}
   </H1>
   {%- seo title=false -%}
