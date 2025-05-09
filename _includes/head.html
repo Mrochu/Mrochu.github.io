@@ -8,11 +8,11 @@
     
     {%- if "/home" != page.title -%}
       {%- if "category" != page.layout -%}
-        {%- if page.category[0] != empty -%}
+        {%- if page.category[0] | default: "" != "" -%}
           <a href="/category/{{page.category[0]}}.html">/{{page.category[0]}}</a>
         {%- endif -%}
       {%- endif -%}
-      {%- if page.category[1] != empty -%}
+      {%- if page.category[1] | default: "" != "" -%}
         <a href="/category/{{page.category[1]}}.html">/{{page.category[1]}}</a>
       {%- endif -%}
       <a href="{{page.url}}">/{{page.title}}</a>
