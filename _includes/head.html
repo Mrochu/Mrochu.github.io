@@ -8,7 +8,7 @@
     
     {%- if "/home" != page.title -%}
       {%- if "category" != page.layout -%}
-        <a href="/category/{{page.categories[0]}}.html">/{{page.categories}}</a>
+        <a href="/category/{{page.categories}}.html">/{{page.categories[0]}}</a>
       {%- endif -%}
       <a href="{{page.url}}">/{{page.title}}</a>
     {%- endif -%}
