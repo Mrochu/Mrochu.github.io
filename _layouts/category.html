@@ -4,7 +4,7 @@ layout: default
 <ul class="posts-list">
   서브 카테고리 <br>
   {% assign sub_categories = "" | split: "" %}
-{% for post in site.categories[page.categories[0]] %}
+{% for post in site.categories[page.category] %}
   {% for category in post.categories %}
     {% if category != page.category %}
       {% assign sub_categories = sub_categories | push: category %}
@@ -12,6 +12,7 @@ layout: default
   {% endfor %}
 {% endfor %}
 {% assign sub_categories = sub_categories | uniq %}
+
 
 {% for category in sub_categories %}
   <li>
