@@ -7,7 +7,7 @@
     <a href="{{site.url}}">/home</a> 
     
     {%- if "/home" != page.title -%}
-      {%- if "category" != page.layout or "sub_category" != page.layout -%}
+      {%- if "category" != page.layout and "sub_category" != page.layout -%}
         {%- if page.category[0] | default: "" != "" -%}
           <a href="/category/{{page.category[0]}}.html">/{{page.category[0]}}</a>
         {%- endif -%}
@@ -17,7 +17,7 @@
         {%- endif -%}
       {%- endif -%}
 
-      {%- else-%}
+      {%- else -%}
         {%- if page.category[0] | default: "" != "" -%}
           <a href="/category/{{page.category[0]}}.html">/{{page.category[0]}}</a>
         {%- endif -%}
