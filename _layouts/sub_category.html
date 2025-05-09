@@ -3,12 +3,13 @@ layout: default
 ---
 <ul class="posts-list">
     카테고리 글
-    {% assign category = page.category[1]%}
+    {% assign category = page.categories[0] %}
+    {% assign category1 = page.categories[1] %}
+
     {% for post in site.categories[category] %}
-        <li>
-        {%- assign date_format = "%Y-%m-%d" -%}
-        [ {{ post.date | date: date_format }} ] <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </li>
+      {% if post.categories contains category1 %}
+        <li>{{ post.title }} - {{ post.categories | join: ", " }}</li>
+      {% endif %}
     {% endfor %}
     
   </ul>
