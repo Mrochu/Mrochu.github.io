@@ -10,7 +10,8 @@ layout: default
           {% endfor %}
         {% endfor %}
         {% assign sub_categories = sub_categories | uniq %}
-   카테고리 글
+   <br>
+        카테고리 글
     {% assign category = page.category | default: page.title %}
     {% for post in site.categories[category] %}
         <li>
