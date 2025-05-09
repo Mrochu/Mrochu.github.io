@@ -4,7 +4,7 @@ layout: default
 <ul class="posts-list">
     카테고리 글
     {% assign category = page.category | default: page.title %}
-    {% for post in site.categories[category] %}
+    {% for post in site.categories[page.categories[0]] %}
       {% if post == page.categories[1] %}
         <li>
         [ {{ post.date | date: date_format }} ] <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
