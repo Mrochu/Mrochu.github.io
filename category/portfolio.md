@@ -1,4 +1,0 @@
----
-title: portfolio
-layout: category
----

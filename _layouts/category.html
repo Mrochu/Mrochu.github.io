@@ -2,7 +2,27 @@
 layout: default
 ---
 <ul class="posts-list">
-   카테고리 글
+  서브 카테고리 <br>
+  {% assign sub_categories = "" | split: "" %}
+  {% for cat in page.categories %}
+  {% for post in site.categories[cat] %}
+    {% for category in post.categories %}
+      {% if category != cat %}
+        {% assign sub_categories = sub_categories | push: category %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+
+
+{% for category in sub_categories %}
+  <li>
+    <a href="/category/{{page.categories[0]}}/sub_category/{{category}}.html">{{ category }}</a>
+  </li>
+{% endfor %}
+      
+    <br>
+    카테고리 글
     {% assign category = page.category | default: page.title %}
     {% for post in site.categories[category] %}
         <li>

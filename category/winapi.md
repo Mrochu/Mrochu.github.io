@@ -1,4 +1,0 @@
----
-title: winapi
-layout: category
----
