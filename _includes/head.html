@@ -16,7 +16,6 @@
         <a href="/category/{{page.category[1]}}.html">/{{page.category[1]}}</a>
         {%- endif -%}
 
-      {% elsif page.layout != "post"%}
         {%- if page.category[0] | default: "" != "" -%}
           <a href="/category/{{page.category[0]}}.html">/{{page.category[0]}}</a>
         {%- endif -%}
@@ -25,7 +24,7 @@
         <a href="/category/{{page.category[1]}}.html">/{{page.category[1]}}</a>
         {%- endif -%}
         <a href="{{page.url}}">/{{page.title}}</a>
-      {%- endif -%}
+
       
       
     {%- endif -%}
