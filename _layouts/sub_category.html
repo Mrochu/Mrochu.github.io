@@ -3,7 +3,7 @@ layout: default
 ---
 <ul class="posts-list">
     카테고리 글
-    {% assign category = page.category[1] | default: page.title %}
+    {% assign category = page.category[1]%}
     {% for post in site.categories[category] %}
         <li>
         {%- assign date_format = "%Y-%m-%d" -%}
