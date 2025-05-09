@@ -8,12 +8,12 @@
     
     {%- if "/home" != page.title -%}
 
-      {%- if page.category[0] | default: "" != "" -%}
-          <a href="/category/{{page.category[0]}}.html">/{{page.category[0]}}</a>
+      {%- if page.categories[0] | default: "" != "" -%}
+          <a href="/category/{{page.categories[0]}}.html">/{{page.categories[0]}}</a>
       {%- endif -%}
 
-      {%- if page.category[1] | default: "" != "" -%}
-        <a href="/category/{{page.category[1]}}.html">/{{page.category[1]}}</a>
+      {%- if page.categories[1] | default: "" != "" -%}
+        <a href="/category/{{page.categories[1]}}.html">/{{page.categories[1]}}</a>
       {%- endif -%}
 
       {%- if "post" == page.layout-%}
