@@ -2,6 +2,12 @@
 layout: default
 ---
 <ul class="posts-list">
+  서브 카테고리
+  {% assign sub_categories = "" | split: "" %}
+  {% for post in site.categories[page.category] %}
+    {% assign sub_categories = sub_categories | push: category %}
+    {% assign sub_categories = sub_categories | uniq %}
+  {% endfor %}
    카테고리 글
     {% assign category = page.category | default: page.title %}
     {% for post in site.categories[category] %}
