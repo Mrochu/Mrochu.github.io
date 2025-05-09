@@ -16,7 +16,7 @@
         <a href="/category/{{page.category[1]}}.html">/{{page.category[1]}}</a>
         {%- endif -%}
 
-      {% elsif "post" != page.layout%}
+      {% elsif page.layout != "post"%}
         {%- if page.category[0] | default: "" != "" -%}
           <a href="/category/{{page.category[0]}}.html">/{{page.category[0]}}</a>
         {%- endif -%}
@@ -24,10 +24,10 @@
         {%- if page.category[1] | default: "" != "" -%}
         <a href="/category/{{page.category[1]}}.html">/{{page.category[1]}}</a>
         {%- endif -%}
-      <a href="{{page.url}}">/{{page.title}}</a>
+        <a href="{{page.url}}">/{{page.title}}</a>
       {%- endif -%}
       
-      <a href="{{page.url}}">/{{page.title}}</a>
+      
     {%- endif -%}
   </H1>
   {%- seo title=false -%}
