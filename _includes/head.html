@@ -17,7 +17,7 @@
         {%- endif -%}
       {%- endif -%}
 
-      {%- elseif "post" == page.layout-%}
+      {%- elsif page.layout == "post"-%}
         {%- if page.category[0] | default: "" != "" -%}
           <a href="/category/{{page.category[0]}}.html">/{{page.category[0]}}</a>
         {%- endif -%}
