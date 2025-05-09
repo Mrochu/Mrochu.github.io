@@ -4,14 +4,15 @@ layout: default
 <ul class="posts-list">
   서브 카테고리 <br>
   {% assign sub_categories = "" | split: "" %}
-{% for post in site.categories[page.categories[0]] %}
-  {% for category in post.categories %}
-    {% if category != page.categories[0] %}
-      {% assign sub_categories = sub_categories | push: category %}
-    {% endif %}
+  {% for cat in page.categories %}
+  {% for post in site.categories[cat] %}
+    {% for category in post.categories %}
+      {% if category != cat %}
+        {% assign sub_categories = sub_categories | push: category %}
+      {% endif %}
+    {% endfor %}
   {% endfor %}
 {% endfor %}
-{% assign sub_categories = sub_categories | uniq %}
 
 
 {% for category in sub_categories %}
