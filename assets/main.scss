@@ -5,6 +5,13 @@
 @import "light";
 @import "base";
 
+@import url("/font/DOSGothic.ttf");
+@font-face {
+    font-family:"DOSGothic";
+    src:url("/font/DOSGothic.ttf") format("ttf");
+    font-weight:normal;
+}
+
 @media (prefers-color-scheme: dark) {
 	@import "dark";
 }
