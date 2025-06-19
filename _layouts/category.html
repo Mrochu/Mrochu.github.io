@@ -2,17 +2,20 @@
 layout: default
 ---
 <ul class="posts-list">
-  서브 카테고리 <br>
-  {% assign sub_categories = "" | split: "" %}
-{% for cat in page.categories %}
-  {% for post in site.categories[cat] %}
-    {% for category in post.categories %}
-      {% if category != cat and (sub_categories contains category) == false %}
+서브 카테고리 <br>
+{% assign sub_categories = "" | split: "" %}
+{% assign main_category = page.categories[0] %}
+
+{% for post in site.categories[main_category] %}
+  {% for category in post.categories %}
+    {% if category != main_category %}
+      {% unless sub_categories contains category %}
         {% assign sub_categories = sub_categories | push: category %}
-      {% endif %}
-    {% endfor %}
+      {% endunless %}
+    {% endif %}
   {% endfor %}
 {% endfor %}
+
 
 {% for category in sub_categories %}
   <li>
