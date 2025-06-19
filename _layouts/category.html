@@ -2,7 +2,7 @@
 layout: default
 ---
 <ul class="posts-list">
-  서브 카테고리 <br>
+  서브 카테고리
   {% assign sub_categories = "" | split: "" %}
 {% for cat in page.categories %}
   {% for post in site.categories[cat] %}
